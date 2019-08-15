@@ -1,0 +1,42 @@
+.home-link{
+	color: black;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 30px;
+}
+
+.nav-pills .nav-link.active {
+	background-color: black;
+}
+
+.nav a:hover {
+	background-color: grey!important;
+}
+
+.jumbotron {
+	margin-bottom: 0;
+	padding: 2vh;
+}
+
+.main-jumbo {
+	height:75vh;
+}
+
+.carousel-item {
+	text-align: center;
+}
+
+.carousel-inner > .carousel-item > .pro-pic {
+	height: 55vh;
+}
+
+.carousel-inner > .carousel-item > .pic2 {
+	height: 55vh;
+	transform: rotate(90deg);
+}
+
+.carousel-inner > .carousel-item > .pic3 {
+	height: 55vh;
+}
