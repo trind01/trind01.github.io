@@ -1,0 +1,22 @@
+<svg width="106" height="103" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="105" width="108" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect transform="rotate(18 68.00000000000001,23.45312500000003) " stroke="null" id="svg_5" height="38.999999" width="25" y="3.953126" x="55.5" stroke-width="null" fill="#000000"/>
+  <ellipse stroke="null" ry="28.999999" rx="29.499999" id="svg_1" cy="59.953126" cx="54.500001" stroke-width="null" fill="#ff7f00"/>
+  <ellipse stroke="null" transform="rotate(18 62.666065216064446,38.51970291137696) " ry="7.195774" rx="21.749042" id="svg_7" cy="38.519703" cx="62.666067" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="#000000"/>
+  <ellipse ry="4.5" rx="7" id="svg_9" cy="51.453125" cx="42.5" stroke-opacity="null" stroke-width="null" stroke="null" fill="#f9f9f9"/>
+  <path id="svg_11" d="m36.5,54.953125" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="#000000"/>
+  <path id="svg_13" d="m35.5,52.953125c-11,11 -9,0 -9.5,-0.953125" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#000000" fill="none"/>
+  <path stroke="null" transform="translate(47.5,68.953125) scale(0.005) translate(-47.5,-68.953125)" id="svg_18" d="m187.702032,-1.648808l-137.928247,73.545698l137.928247,73.545629l-78.824551,42.055652l-216.752668,-115.601272l216.752668,-115.610107" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="#000000"/>
+  <path stroke="#000000" transform="rotate(13 68.05249786376957,56.020324707031214) " id="svg_21" d="m61.388758,54.457412l13.327474,0l0,3.125825l-13.327474,0l0,-3.125825z" fill-opacity="null" stroke-width="null" fill="#000000"/>
+  <path stroke="#000000" id="svg_23" d="m41.5,78.953125c-2,8 -6,23 -6.5,22.046875" opacity="0.5" stroke-opacity="null" stroke-width="NaN" fill="none"/>
+  <path stroke="#000000" id="svg_24" d="m56.5,80.953125c-2,8 -6,23 -6.5,22.046875" opacity="0.5" stroke-opacity="null" stroke-width="NaN" fill="none"/>
+  <path id="svg_26" d="m69.5,81.953125c25,18 11,-8 10.5,-8.953125" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="NaN" stroke="#000000" fill="none"/>
+  <path stroke="#000000" id="svg_28" d="m33.5,76.382826c-40.54339,29.368457 -4.137081,-10.605276 -4.550789,-11.382826" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="NaN" fill="none"/>
+ </g>
+</svg>

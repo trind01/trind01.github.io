@@ -1,0 +1,482 @@
+@media (min-width: 992px){
+    #top {
+        padding-top: 130px;
+    }
+}
+
+#top {
+    padding-top: 0;
+    overflow: hidden;
+    background: #e0ebe8;
+}
+
+#home-top {
+    background: inherit;    
+    opacity: 1;
+    box-shadow: none;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    padding: 2em 0;
+}
+
+.container {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+#header-logo {
+    -webkit-animation: fadeIn .3s ease-in-out;
+    -moz-transition: fadeIn .3s ease-in-out;
+    -o-transition: fadeIn .3s ease-in-out;
+    transition: fadeIn .3s ease-in-out;
+    border-radius: 60px;
+    overflow: hidden;
+    width: 72px;
+    height: 72px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.image-text {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-indent: -9999px;
+}
+
+.image-text a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    color: #e0ebe8;
+    text-decoration: none;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#header-logo .mask {
+    background-image: url(../img/home/header-logo-mask.png);
+    position: absolute;
+    height: 72px;
+    width: 72px;
+    z-index: 1000;
+}
+
+#header-logo span {
+    display: block;
+}
+
+#header-logo .behind {
+    background: #f6f9f8;
+    position: absolute;
+    height: 72px;
+    width: 72px;
+    z-index: 800;
+}
+
+#header-logo i {
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    width: 162px;
+    height: 162px;
+    background: url(../img/home/me.jpg) no-repeat;
+    z-index: 900;
+}
+
+.transistion {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.nav {
+    display: block;
+}
+
+body {
+    font-family: brevier, sans-serif ,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #545454;
+    background-color: #fff;
+}
+
+.nav-list {
+    padding-top: 1.5em;
+    padding-left: 0;
+    position: relative;
+    float: right;
+}
+
+.nav-list li {
+    display: block;
+    float: left;
+}
+
+.nav-list li:first-child a {
+    margin-left: 0;
+}
+
+.nav-list li a.active {
+    color: #21564b;
+}
+
+.nav-list li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #45b29a;
+    font-weight: 400;
+    margin: 0 0 0 1em;
+    font-size: 120%;
+}
+
+a {
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.masthead-wrap {
+    -webkit-animation: fadeIn .5s ease-in-out;
+    -moz-transition: fadeIn .5s ease-in-out;
+    -o-transition: fadeIn .5s ease-in-out;
+    transition: fadeIn .5s ease-in-out;
+}
+
+.masthead-wrap-project {
+    -webkit-animation: fadeIn .5s ease-in-out;
+    -moz-transition: fadeIn .5s ease-in-out;
+    -o-transition: fadeIn .5s ease-in-out;
+    transition: fadeIn .5s ease-in-out;
+    height: 300px;
+}
+
+#title {
+    padding: .5em 0 0;
+    position: relative;
+}
+
+#title .container {
+    position: relative;
+}
+
+#title .left-bread {
+    left: -6em;
+    bottom: 2em;
+    background: url(../img/home/ChipAscii.png) top left no-repeat;
+    width: 247px;
+    height: 156px;
+    object-fit: contain;
+}
+
+#title .left-bread-project {
+    left: -6em;
+    background: url(../img/home/ChipAscii.png) top left no-repeat;
+    width: 247px;
+    height: 156px;
+}
+
+#title .right-bread {
+    right: -5em;
+    top: 0;
+    background: url(../img/home/CompAscii.png) top left no-repeat;
+    width: 192px;
+    height: 259px;
+}
+
+#title .bread {
+    position: absolute;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    z-index: 980;
+}
+
+#head-slider {
+    padding: 1em 0;
+}
+
+h2.im-tom figure {
+    max-width: 240px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 990;
+}
+
+h2.im-tom img {
+    width: 100%;
+    display: inline-block;
+}
+
+#head-slider p.header-desc {
+    text-align: center;
+    color: #45b29a;
+    padding: 1em 0;
+    font-size: 180%;
+    font-weight: 400;
+    font-family: brevier, sans-serif,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+
+#earth-holder {
+    margin: 0 auto;
+    max-width: 800px;
+    overflow: hidden;
+    text-align: center;
+}
+
+@media (min-width: 992px){
+    #hello {
+        padding: 6em 0 0;
+        margin: 0 0 6em;
+    }
+}
+
+#about-me {
+    z-index: 980;
+    position: relative;
+    padding: 3em 0 0;
+    margin: 0 0 3em;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-12 {
+        width: 100%;
+    }
+}
+
+#about-me article {
+    margin: 0 auto;
+    max-width: 460px;
+}
+
+#about-me .propic {
+    background: #F3F2F1;
+    -webkit-border-radius: 250px;
+    -moz-border-radius: 250px;
+    border-radius: 250px;
+    overflow: hidden;
+}
+
+#about-me article figure img {
+    width: 100%;
+}
+
+#about-me article h3 {
+    text-align: center;
+    padding: .5em 0;
+}
+
+#about-me article p {
+    text-align: center;
+    font-family: brevier, sans-serif;
+    font-size: 1.5em;
+}
+
+.breaker {
+    margin: 0 auto;
+    max-width: 100px;
+}
+
+.breaker .container {
+    width: auto;
+}
+
+.breaker .line {
+    background-image: url(../img/home/line-bg.png);
+    height: 6px;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    #my-work {
+        padding: 3em 0;
+    }
+}
+
+#my-work {
+    z-index: 980;
+    position: relative;
+    background: #fff;
+    padding: 0;
+}
+
+article header {
+    background: 0 0;
+}
+
+article header h2 {
+    color: #1e836c;
+    text-align: center;
+    font-size: 3.8em;
+    font-weight: 400;
+}
+
+#my-work #technologies {
+    margin: 1em 0;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    #my-work #technologies {
+        text-align: left;
+        margin: 3em 0 6em;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), not all, not all, (min-resolution: 1.5dppx) {
+    #my-work .tech-info {
+        background-image: url(../img/home/line-bg.png);
+        background-size: 3px auto;
+    }
+}
+
+#my-work .tech-info {
+    margin: 0 auto;
+    background-image: url(../img/home/line-bg.png);
+    background-position: center center;
+    background-repeat: repeat-x;
+    position: relative;
+}
+
+#my-work .tech-info figure {
+    max-width: 150px;
+}
+
+#my-work .tech-info figure img {
+    width: 100%;
+}
+
+#my-work .right {
+    right: 0;
+}
+
+#my-work .bubble {
+    background: #F3F2F1;
+    width: 77px;
+    height: 77px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    position: absolute;
+    overflow: hidden;
+    top: 2.6em;
+}
+
+#my-work .bubble .bubbling-design-icons-vert {
+    -webkit-animation-name: bubblinger-vert-down;
+    -moz-animation-name: bubblinger-vert-down;
+    animation-name: bubblinger-vert-down;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    width: 77px;
+    height: 77px;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(1,0,0,1);
+    -moz-animation-duration: 20s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: cubic-bezier(1,0,0,1);
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1,0,0,1);
+    background-image: url(../img/home/cloud.png);
+}
+
+#my-work .bubble-right{
+    background: #F3F2F1;
+    width: 77px;
+    height: 77px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    text-align: center;
+    padding: 7px 0;
+    position: absolute;
+    overflow: hidden;
+    top: 2.6em;
+}
+
+#my-work .bubble-right figure img{
+    background: #F3F2F1;
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/home/cloud.png);
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 992px) {
+    #my-work .tech-details {
+        padding: 0 0 0 2em;
+    }
+}
+
+#my-work .tech-details {
+    padding: 2em 0;
+}
+
+#my-work h3 {
+    padding: 0 0 1em;
+    margin: 0;
+}
+
+footer {
+    background: #c5ded7;
+    padding: 3em 0;
+}
+
+footer p {
+    text-align: center;
+    color: #45b29a;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+    padding: 2.5em 0 0;
+}
+
+p a {
+    color: #45b29a;
+    border-bottom: 1px solid #45b29a;
+}
+
+#project-list {
+    z-index: 980;
+    position: relative;
+    padding: 3em 0 0;
+    margin: 0 0 3em;
+    text-align: center;
+}
+
+#project-list .container {
+    max-width: 75%;
+}
+
+#project-list .card {
+    max-width: 75%;
+    margin-bottom: 2em;
+}
+
+.project-info h3 {
+    text-align: center;
+}
