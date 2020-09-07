@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html class="js no-touch rgba backgroundsize borderradius boxshadow opacity cssanimations csstransitions generatedcontent inlinesvg wf-brandongrotesque-n4-active wf-brandongrotesque-n7-active wf-brandongrotesque-n5-active wf-brandongrotesque-n3-active wf-adobegaramondpro-i7-active wf-adobegaramondpro-n7-active wf-adobegaramondpro-i4-active wf-adobegaramondpro-n4-active wf-brandongrotesque-i5-active wf-active" lang="en" style>
+<html class="js no-touch rgba backgroundsize borderradius boxshadow 
+            opacity cssanimations csstransitions generatedcontent 
+            inlinesvg wf-brandongrotesque-n4-active wf-brandongrotesque-n7-active 
+            wf-brandongrotesque-n5-active wf-brandongrotesque-n3-active 
+            wf-adobegaramondpro-i7-active wf-adobegaramondpro-n7-active 
+            wf-adobegaramondpro-i4-active wf-adobegaramondpro-n4-active 
+            wf-brandongrotesque-i5-active wf-active" lang="en" style>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="description" content="A Claw Thing I made when I was bored.">
+        <meta name="description" content="Some things Tom has made when he was bored">
         <link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../assets/css/index.css">
@@ -16,7 +22,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <title>Claw machine</title>
+        <title>Tom's Projects</title>
     </head>
     <body>
         <section id="top">
@@ -64,7 +70,7 @@
 								<div id="head-slider" class="transistion">
 									<div class="slide-contents">
 										<div class="slide">
-											<p class="header-desc">Claw Machine</p>
+											<p class="header-desc">A Dino Chrome Game<br>That will Shock You!</p>
 										</div>
 									</div>
 								</div>
@@ -80,19 +86,21 @@
                 <div class="row">
                     <div class="col-md-4">
                         <figure>
-                            <img src="../assets/img/projects/claw/fullclaw.jpg">
+                            <img src="../assets/img/projects/dino_chrome/ChromeGame.jpg">
                         </figure>
                     </div>
                     <div class="col-md-6">
                         <h3> Origin</h3>
                         <p>
-                            A while back I saw some cool ideas of making claw machines on instructable. 
-                            I wanted to make one but and bought some servos to start playing around. 
-                            Unfortunately I was always busy with something else. 
-                            Then Covid-19 hit and I realized the utility of such a design. 
-                            You can not pick up germs from a surface if you don't touch it.
-                            I also though how silly it would be to have claws strapped to all our chests to pick up things for us. 
-                            With mission in hand and the fact that I could no longer go out at night I got work.
+                            The Dino Chrome game is a game you can play in the chrome browser when you have no internet.
+                            You control a dinosaur jumping over cacti and ducking under vultures. If you touch any obstacle you lose.
+                            Your score is determined for how long you are running. I saw a video of someone controlling the the game
+                            by jumping, but the barely jumped off the ground because they were using a stretch sensor that had 
+                            limited range. So I thought about the best way to detect a jump and thought I could do it with an 
+                            accelerometer since I just needed very basic movement. Another issue I saw is that they were plugged
+                            into the computer to send commands which also limited your jump range and movement. Additionaly I wanted
+                            get feedback from the game to the microcontroller to give some sort of feedback. I was starting to use
+                            some bluetooth and thought it would be a good idea to use that to send controls and receive feedback.
                         </p>
                     </div>
                 </div>
@@ -105,45 +113,50 @@
                     <div class="col-md-6">
                         <h3>Design</h3>
                         <p>
-                            I played around with the servos and 3D printed some arms. 
-                            I was orginally going to use just a Photon Board to control the arm, but I ran into some issues. 
-                            To control the servo motors I needed to use PWM on 4 motors. I also wanted to use the Photon's wifi 
-                            and servers to control the claw. Unfortunately the when the photon tried to control the motors and do 
-                            wifi, the wifi would disconnect. I suspect that the motor control used too much power. 
-                            So I got a separate Teensy 4.1 board to control the servo motors. This board would get I2C commands from 
-                            the Photon board, which in turn got commands from the photon server. I powered the boards through a portable 
-                            power bank and I powered the motors through a 6V AA pack. Another issue I can into is that the motors used 
-                            so much current that only one could move at a time so I had to code movements to not be done in parallel and 
-                            instead be queued up.
+                            I got an esp32 board since it has many simple arduino bluetooth libraries already established. 
+                            In order for the board to detect jumps I printed out results from the accelerometer when I jumped and 
+                            I noticed what values changed. I had to do some fine tuning to get a jump and duck to be properly detected.
+                            To send commands to my computer I used the Bluetooth Keyboard Library. Every jump sent the up key and 
+                            every duck sent the down key. The toughest part came when trying to get feedback from the computer.
+                            I didn't want to set up a bluetooth app so I looked for a different way to send feedback. I found
+                            out that in nodeJS you can send data using a serial port. There existed a Bluetooth serial port for 
+                            the ESP32 so using that I copied the Chrome Dino Game javascript to set up and run the game. I then 
+                            set up a node server that will receive a post command from the game when the player loses. This will send 
+                            a 'F' character on the bluetooth serial port which tells the esp that the player lost. I decided to have
+                            fun with this and if the player loses the esp32 will turn on a relay which will short a pad on a TENs 
+                            unit, shocking the player.
                         </p>
                     </div>
                     <div class="col-md-4">
                         <figure>
-                            <img src="../assets/img/projects/claw/internals.jpg">
+                            <img src="../assets/img/projects/dino_chrome/Disassembled.jpg">
                         </figure>
                     </div>
                 </div>
             </div>
         </section>
-
+        
         <section class="project-info">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
                         <figure>
-                            <img src="../assets/img/projects/claw/wearing_claw.jpg">
+                            <img src="../assets/img/projects/dino_chrome/Assembled.jpg">
                         </figure>
                     </div>
                     <div class="col-md-6">
                         <h3>Conclusion</h3>
                         <p>
-                            This project was in no way perfect. It was mainly done because I was bored. The arm could move pretty 
-                            well but was hindered by alot of factors. First off the actual base is a Nike shoebox because I didn't 
-                            want to spend money on an actual base. But I needed something much more solid and sturdy that I could 
-                            mount the base servo on. I just used velcro tape because I had some. Another issue is that the motors 
-                            needed much more power than I could supply. An actual power supply would have been much better than 4 AA 
-                            batteries. The base servo was not strong enough to lift on it's own and an additional servo could have helped. 
-                            Much of this was losely thrown together for fun but I did discover alot about using servos.
+                            Beforehand I did not know much about bluetooth or GATT and probably would 
+                            have done this a little differently. The real challenge came when I had to get feedback from 
+                            the game to the board. I am unfamiliar with javascript and node some from a class I
+                            took. In addition to that I was unsure of what alot of the bluetooth terminology meant 
+                            and was mainly making this fast and for fun. This would have been alot easier to get feedback had
+                            I set up a GATT characterstic that I could write too. There exists a Google bluetooth web API 
+                            that I do not fully understand but could probably work out at this point. The accelerometer worked 
+                            pretty well when detecting jumps, sometimes it detected a jump when I didn't jump but I could 
+                            fine tune it to work much better. The shocks were as expected, the least fun part about playing the
+                            game for the player, but the most fun part for anyone watching the player.
                         </p>
                         <br>
                         <h5>Please Enjoy the Video Below</h5>
@@ -151,20 +164,21 @@
                 </div>
             </div>
         </section>
-
+        
         <section class="project-info">
             <div class="container">
                 <div class="row">
                     <iframe 
                         width="560" height="315" 
-                        src="https://www.youtube.com/embed/sZ_jMN-y8YA?controls=0" 
+                        src="https://www.youtube.com/embed/pPVqmy4ZEmQ?controls=0" 
                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen>
                     </iframe>
                 </div>
             </div>
         </section>
-        
+
+
 		<footer>
 			<div class="container">
 				<div class="row">
