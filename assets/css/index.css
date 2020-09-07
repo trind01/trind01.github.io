@@ -498,6 +498,10 @@ p a {
     margin-bottom: 2em;
 }
 
+.project-info{
+    margin-top: 1em;
+}
+
 .project-info h3 {
     text-align: center;
 }
