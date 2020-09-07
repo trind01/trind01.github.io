@@ -304,17 +304,17 @@ h2.im-tom img {
     width: 100%;
 }
 
-@media (min-width: 992px) {
-    #my-work {
-        padding: 3em 0;
-    }
-}
-
 #my-work {
     z-index: 980;
     position: relative;
     background: #fff;
     padding: 0;
+}
+
+@media (min-width: 992px) {
+    #my-work {
+        padding: 3em 0;
+    }
 }
 
 article header {
@@ -340,19 +340,20 @@ article header h2 {
     }
 }
 
+#my-work .tech-info {
+    margin: 0 auto;
+    background-image: url(../img/home/line-bg.png);
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    position: relative;
+    min-height: 77px;
+}
+
 @media (-webkit-min-device-pixel-ratio: 1.5), not all, not all, (min-resolution: 1.5dppx) {
     #my-work .tech-info {
         background-image: url(../img/home/line-bg.png);
         background-size: 3px auto;
     }
-}
-
-#my-work .tech-info {
-    margin: 0 auto;
-    background-image: url(../img/home/line-bg.png);
-    background-position: center center;
-    background-repeat: repeat-x;
-    position: relative;
 }
 
 #my-work .tech-info figure {
