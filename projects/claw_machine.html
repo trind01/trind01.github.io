@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="description" content="Some things Tom has made when he was bored">
+        <meta name="description" content="A Claw Thing I made when I was bored.">
         <link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../assets/css/index.css">
@@ -16,7 +16,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <title>Tom's Projects</title>
+        <title>Claw machine</title>
     </head>
     <body>
         <section id="top">
@@ -64,7 +64,7 @@
 								<div id="head-slider" class="transistion">
 									<div class="slide-contents">
 										<div class="slide">
-											<p class="header-desc">Project Name</p>
+											<p class="header-desc">Claw Machine</p>
 										</div>
 									</div>
 								</div>
@@ -80,13 +80,19 @@
                 <div class="row">
                     <div class="col-md-4">
                         <figure>
-                            <img src="../assets/img/home/bread.svg">
+                            <img src="../assets/img/projects/claw/fullclaw.jpg">
                         </figure>
                     </div>
                     <div class="col-md-6">
                         <h3> Origin</h3>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            A while back I saw some cool ideas of making claw machines on instructable. 
+                            I wanted to make one but and bought some servos to start playing around. 
+                            Unfortunately I was always busy with something else. 
+                            Then Covid-19 hit and I realized the utility of such a design. 
+                            You can not pick up germs from a surface if you don't touch it.
+                            I also though how silly it would be to have claws strapped to all our chests to pick up things for us. 
+                            With mission in hand and the fact that I could no longer go out at night I got work.
                         </p>
                     </div>
                 </div>
@@ -99,18 +105,66 @@
                     <div class="col-md-6">
                         <h3>Design</h3>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            I played around with the servos and 3D printed some arms. 
+                            I was orginally going to use just a Photon Board to control the arm, but I ran into some issues. 
+                            To control the servo motors I needed to use PWM on 4 motors. I also wanted to use the Photon's wifi 
+                            and servers to control the claw. Unfortunately the when the photon tried to control the motors and do 
+                            wifi, the wifi would disconnect. I suspect that the motor control used too much power. 
+                            So I got a separate Teensy 4.1 board to control the servo motors. This board would get I2C commands from 
+                            the Photon board, which in turn got commands from the photon server. I powered the boards through a portable 
+                            power bank and I powered the motors through a 6V AA pack. Another issue I can into is that the motors used 
+                            so much current that only one could move at a time so I had to code movements to not be done in parallel and 
+                            instead be queued up.
                         </p>
                     </div>
                     <div class="col-md-4">
                         <figure>
-                            <img src="../assets/img/home/bread.svg">
+                            <img src="../assets/img/projects/claw/internals.jpg">
                         </figure>
                     </div>
                 </div>
             </div>
-		</section>
-		
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <figure>
+                            <img src="../assets/img/projects/claw/wearing_claw.jpg">
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Conclusion</h3>
+                        <p>
+                            This project was in no way perfect. It was mainly done because I was bored. The arm could move pretty 
+                            well but was hindered by alot of factors. First off the actual base is a Nike shoebox because I didn't 
+                            want to spend money on an actual base. But I needed something much more solid and sturdy that I could 
+                            mount the base servo on. I just used velcro tape because I had some. Another issue is that the motors 
+                            needed much more power than I could supply. An actual power supply would have been much better than 4 AA 
+                            batteries. The base servo was not strong enough to lift on it's own and an additional servo could have helped. 
+                            Much of this was losely thrown together for fun but I did discover alot about using servos.
+                        </p>
+                        <br>
+                        <h5>Please Enjoy the Video Below</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <iframe 
+                        width="560" height="315" 
+                        src="https://www.youtube.com/embed/sZ_jMN-y8YA?controls=0" 
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+                </div>
+            </div>
+        </section>
+        
 		<footer>
 			<div class="container">
 				<div class="row">

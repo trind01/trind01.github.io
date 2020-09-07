@@ -4,12 +4,6 @@
     background: #e0ebe8;
 }
 
-@media (min-width: 992px){
-    #top {
-        padding-top: 130px;
-    }
-}
-
 #home-top {
     background: inherit;    
     opacity: 1;
@@ -268,12 +262,6 @@ h2.im-tom img {
     }
 }
 
-@media (min-width: 768px) {
-    .container {
-        max-width: 750px;
-    }
-}
-
 @media (min-width: 992px) {
     .col-md-12 {
         width: 100%;
@@ -504,4 +492,20 @@ p a {
 
 .project-info h3 {
     text-align: center;
+}
+
+.project-info .container .row{
+    vertical-align: middle;
+        margin: auto;
+}
+
+.project-info .container .row .col-md-4 figure img{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.project-info .container .row iframe{
+    margin: 0 auto;
+    margin-bottom: 2em;
 }
