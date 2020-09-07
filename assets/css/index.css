@@ -154,7 +154,7 @@ a {
     -moz-transition: fadeIn .5s ease-in-out;
     -o-transition: fadeIn .5s ease-in-out;
     transition: fadeIn .5s ease-in-out;
-    height: 300px;
+    min-height: 300px;
 }
 
 #title {
@@ -167,7 +167,7 @@ a {
 }
 
 #title .left-bread {
-    left: -6em;
+    left: -7em;
     bottom: 2em;
     background: url(../img/home/ChipAscii.png) top left no-repeat;
     width: 247px;
@@ -494,6 +494,7 @@ p a {
 
 #project-list .card {
     max-width: 75%;
+    margin: 0 auto;
     margin-bottom: 2em;
 }
 
