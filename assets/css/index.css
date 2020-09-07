@@ -1,13 +1,13 @@
-@media (min-width: 992px){
-    #top {
-        padding-top: 130px;
-    }
-}
-
 #top {
     padding-top: 0;
     overflow: hidden;
     background: #e0ebe8;
+}
+
+@media (min-width: 992px){
+    #top {
+        padding-top: 130px;
+    }
 }
 
 #home-top {
@@ -190,11 +190,22 @@ a {
     height: 259px;
 }
 
-#title .bread {
-    position: absolute;
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-    z-index: 980;
+@media (min-width: 596px){
+    #title .bread {
+        position: absolute;
+        -webkit-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+        z-index: 980;
+    }
+}
+
+@media (max-width: 595px){
+    #title .bread {
+        -webkit-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+        z-index: 980;
+        margin: 0 auto;
+    }
 }
 
 #head-slider {
@@ -227,6 +238,14 @@ h2.im-tom img {
     max-width: 800px;
     overflow: hidden;
     text-align: center;
+    padding-left: 2em;
+}
+
+@media (max-width: 675px){
+    #earth-holder img{
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media (min-width: 992px){
