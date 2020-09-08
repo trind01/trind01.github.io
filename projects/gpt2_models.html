@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="js no-touch rgba backgroundsize borderradius boxshadow opacity cssanimations csstransitions generatedcontent inlinesvg wf-brandongrotesque-n4-active wf-brandongrotesque-n7-active wf-brandongrotesque-n5-active wf-brandongrotesque-n3-active wf-adobegaramondpro-i7-active wf-adobegaramondpro-n7-active wf-adobegaramondpro-i4-active wf-adobegaramondpro-n4-active wf-brandongrotesque-i5-active wf-active" lang="en" style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="GPT2 Language Models">
+        <link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../assets/css/index.css">
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script src="../assets/js/respond.min.js"></script>
+		<script src="../assets/js/modernizr.js"></script>
+		<link rel="stylesheet" href="https://use.typekit.net/ehh5azc.css">
+		<link rel="stylesheet" href="https://use.typekit.net/ehh5azc.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <title>Language Models</title>
+    </head>
+    <body>
+        <section id="top">
+            <header id="home-top" class="nav">
+            	<div class="container">
+            		<div class="row">
+            			<div class="col-md-4 col-xs-4">
+            				<h1 id="header-logo" class="image-text">
+            					<a href="../index.html">
+									<span class="mask"></span>
+									<span class="behind"><i class=""></i></span>
+									Thomas Rind
+									
+								</a>
+            				</h1>
+            			</div>
+            			<div class="col-md-8 col-xs-8">
+            				<nav>
+            					<ul class="nav-list transistion">
+            						<li>
+            							<a href="../index.html">About</a>
+            						</li>
+            						<li>
+            							<a class="active" href="../projects.html">Projects</a>
+            						</li>
+            						<li>
+            							<a href="https://www.linkedin.com/in/thomas-rind-92203bb8">LinkedIn</a>
+            						</li>
+            						<li>
+            							<a href="../assets/files/TRRes.pdf">Resume</a>
+            						</li>
+								</ul>
+							</nav>
+						</div>
+            		</div>
+            	</div>
+			</header>
+			<div class="masthead-wrap-project">
+				<div id="title">
+					<div class="container">
+						<div class="transistion bread left-bread-project"></div>
+						<div class="transistion bread right-bread"></div>
+						<div class="row">
+							<div class="col-md-12">
+								<div id="head-slider" class="transistion">
+									<div class="slide-contents">
+										<div class="slide">
+											<p class="header-desc">Playing with GPT2 Language Models</p>
+										</div>
+									</div>
+								</div>
+							</div> 
+						</div> 
+					</div>
+				</div>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <figure>
+                            <img src="../assets/img/projects/language_models/training.PNG">
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h3> Origin</h3>
+                        <p>
+                            I wanted to originally train a chat bot on random twitter accounts like the 
+                            followers of Donald Trump or Thoughts of Dog, but the issue I had with this is that
+                            the tweets were such a small dataset (and the tweets of DT followers were incomprehensible)
+                            that the chat bot just wasn't able to produce great answers. Eventually Cards Against 
+                            Humanity did a holiday promotion where they trained the GPT-2 model on their cards. I 
+                            learned that the GPT-2 model was trained on 40GB and was available to the public.
+                            It understood english grammer and could be retrained to fit whatever I wanted it to.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Design</h3>
+                        <p>
+                            I had to fix some file paths and such put eventually I got it to start training. I thought about 
+                            what I wanted to train this model on to see how good it was. I realized that if it could be trained 
+                            on fanfic and write and capture the style of those fanfics then that would show how powerful this was.
+                            So I scraped a 10MB of Sonic fanfiction from the internet (this was from 1 author, all of Shakespeares 
+                            works is around 5.5MB). I trained it and attempted to use my GPU but found out the model wouldn't fit
+                            in the memory and trained it on my CPU instead. It was trained for about a day and enough and provided
+                            samples that I honestly though were written by an edgy preteen. Now that I knew the model was good 
+                            I trained it on other things, from Avatar the Last Airbender scripts to the headlines of various
+                            satire sites like the Onion. This entertained me so much because how realistic the results were, 
+                            but still silly enough to be make one almost question if it was an original or a generated sample.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <figure>
+                            <img src="../assets/img/projects/language_models/satire_tweets.PNG">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <h3>Some of my favorite satire headlines: </h3>
+                    <ul>
+                        <li>New App Lets Me Just Watch These Two Strangers Cry Together</li>
+                        <li>Report: Could This Be The Beginning Of An All-New Era Of Despair?</li>
+                        <li>New Study: 90% of Marijuana Users Are Pretty Baffled by It </li>
+                        <li>5 Signs Your Kids Might Not Understand ‘Game of Thrones’s Script</li>
+                        <li>Canadian and American women on average have less sex per year than Japanese and Italian men</li>
+                        <li>PornHub has become the new Wanker</li>
+                        <li>What If We Treated Racism With a Musical?</li>
+                        <li>Study Finds Newborn Fucks Way Too Much</li>
+                        <li>Opinion: I Never Knew I Was Represented by a Goddamned Gorilla</li>
+                        <li>I am not a hater of the Catholic Church, they are just posers.</li>
+                        <li>Man's Opinionated Mind Just Wants To Comfort Him Again </li>
+                        <li>my mom has been arrested for a crime that she didn't commit, but you know, she did something.</li>
+                        <li>New Poll Shows Majority Of Americans Unsure Which Candidate Will Be President</li>
+                    </ul>
+                </div>
+            </div>
+		</section>
+		
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p>Want to get home? Click <a href="../index.html">Tom.</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    </body>
+</html>
