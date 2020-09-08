@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="js no-touch rgba backgroundsize borderradius boxshadow opacity cssanimations csstransitions generatedcontent inlinesvg wf-brandongrotesque-n4-active wf-brandongrotesque-n7-active wf-brandongrotesque-n5-active wf-brandongrotesque-n3-active wf-adobegaramondpro-i7-active wf-adobegaramondpro-n7-active wf-adobegaramondpro-i4-active wf-adobegaramondpro-n4-active wf-brandongrotesque-i5-active wf-active" lang="en" style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="Junior Design Project">
+        <link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../assets/css/index.css">
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script src="../assets/js/respond.min.js"></script>
+		<script src="../assets/js/modernizr.js"></script>
+		<link rel="stylesheet" href="https://use.typekit.net/ehh5azc.css">
+		<link rel="stylesheet" href="https://use.typekit.net/ehh5azc.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <title>Swarm Bots</title>
+    </head>
+    <body>
+        <section id="top">
+            <header id="home-top" class="nav">
+            	<div class="container">
+            		<div class="row">
+            			<div class="col-md-4 col-xs-4">
+            				<h1 id="header-logo" class="image-text">
+            					<a href="../index.html">
+									<span class="mask"></span>
+									<span class="behind"><i class=""></i></span>
+									Thomas Rind
+									
+								</a>
+            				</h1>
+            			</div>
+            			<div class="col-md-8 col-xs-8">
+            				<nav>
+            					<ul class="nav-list transistion">
+            						<li>
+            							<a href="../index.html">About</a>
+            						</li>
+            						<li>
+            							<a class="active" href="../projects.html">Projects</a>
+            						</li>
+            						<li>
+            							<a href="https://www.linkedin.com/in/thomas-rind-92203bb8">LinkedIn</a>
+            						</li>
+            						<li>
+            							<a href="../assets/files/TRRes.pdf">Resume</a>
+            						</li>
+								</ul>
+							</nav>
+						</div>
+            		</div>
+            	</div>
+			</header>
+			<div class="masthead-wrap-project">
+				<div id="title">
+					<div class="container">
+						<div class="transistion bread left-bread-project"></div>
+						<div class="transistion bread right-bread"></div>
+						<div class="row">
+							<div class="col-md-12">
+								<div id="head-slider" class="transistion">
+									<div class="slide-contents">
+										<div class="slide">
+											<p class="header-desc">Swarm Bots</p>
+										</div>
+									</div>
+								</div>
+							</div> 
+						</div> 
+					</div>
+				</div>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <figure>
+                            <img src="../assets/img/projects/junior_design/bots1.jpg">
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h3> Origin</h3>
+                        <p>
+                            For Junior Design we were tasked with designing and making a swarm bot that
+                            could follow a colored path, detect a magnet, and communicate with ultrasound.
+                            We were split into teams and in phase 1 we had to implement each subsytem on 
+                            our own. Then in phase 2 we combined with another team and built our bots to communicate with each other.
+                            Our bots then had to go through the course.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Design</h3>
+                        <p>
+                            We controlled the motor system on a seperate power supply than our Arduino Mega because it
+                            introduced to much noise and also required a high current the the pins could supply. The motors 
+                            could be controlled by using an H-bridge. We were not allowed to use ICs for certain circuits and 
+                            this was one of them so we had to build it ourselves. To detect a magnet we just used a hall
+                            sensor. For colored path finding we used a LEDs and photoresistors to determine what colors were 
+                            being reflected from the path. The hardest part was the ultrasound receiver and trasmitter. We
+                            had to set up several bandpass filters and 5V regulators to get a good signal. The breadboard we used
+                            introduced alot of noise that made us think we set up the filter wrong. We soldered it several times
+                            before getting a good receiver. When we combined teams we worked more closely than other pairs and
+                            split up so that specific sub groups made one thing so the work each subsystem could be made to match.
+                            This way the swarm bots remained consistent with each other. We would test, revise, and retest. 
+                            Eventually things worked out and were the only team that was able to finish and present on time.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <figure>
+                            <img src="../assets/img/projects/junior_design/bots2.jpg">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <figure>
+                            <img src="../assets/img/projects/junior_design/bots3.jpg">
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Conclusion</h3>
+                        <p>
+                            The hardest part of this project was the receiver. We had to have multiple group members 
+                            give it a try before the professor told the issue was all the noise various components introduced.
+                            The key to finishing on time was splitting up and making the bots be consistent with each other.
+                            This way the speakers and receivers were on the same level and the tracking sensors got equal values 
+                            so we didn't have to make differences in the code. This also showed the value of project planning. 
+                            By isolating each subsystem we understood each one much more and when it came time to integrate everything
+                            we could find issues much faster.
+                        </p>
+                        <br>
+                        <h5>Please Enjoy the Video Below</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <iframe 
+                        width="560" height="315" 
+                        src="https://www.youtube.com/embed/DFJiI-S07MA" 
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p>Want to get home? Click <a href="../index.html">Tom.</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    </body>
+</html>
