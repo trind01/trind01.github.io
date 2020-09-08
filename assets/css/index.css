@@ -486,6 +486,10 @@ p a {
     margin-bottom: 2em;
 }
 
+#project-list .card img {
+    max-height: 225px;
+}
+
 .project-info{
     margin-top: 1em;
 }
@@ -494,9 +498,8 @@ p a {
     text-align: center;
 }
 
-.project-info .container .row{
-    vertical-align: middle;
-        margin: auto;
+.project-info .container .row .col-md-4{
+   margin-top: 3em;
 }
 
 .project-info .container .row .col-md-4 figure img{
