@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="js no-touch rgba backgroundsize borderradius boxshadow opacity cssanimations csstransitions generatedcontent inlinesvg wf-brandongrotesque-n4-active wf-brandongrotesque-n7-active wf-brandongrotesque-n5-active wf-brandongrotesque-n3-active wf-adobegaramondpro-i7-active wf-adobegaramondpro-n7-active wf-adobegaramondpro-i4-active wf-adobegaramondpro-n4-active wf-brandongrotesque-i5-active wf-active" lang="en" style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="Deciphering the contents of an EEProm">
+        <link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../assets/css/index.css">
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script src="../assets/js/respond.min.js"></script>
+		<script src="../assets/js/modernizr.js"></script>
+		<link rel="stylesheet" href="https://use.typekit.net/ehh5azc.css">
+		<link rel="stylesheet" href="https://use.typekit.net/ehh5azc.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <title>Reprogram Fan</title>
+    </head>
+    <body>
+        <section id="top">
+            <header id="home-top" class="nav">
+            	<div class="container">
+            		<div class="row">
+            			<div class="col-md-4 col-xs-4">
+            				<h1 id="header-logo" class="image-text">
+            					<a href="../index.html">
+									<span class="mask"></span>
+									<span class="behind"><i class=""></i></span>
+									Thomas Rind
+								</a>
+            				</h1>
+            			</div>
+            			<div class="col-md-8 col-xs-8">
+            				<nav>
+            					<ul class="nav-list transistion">
+            						<li>
+            							<a href="../index.html">About</a>
+            						</li>
+            						<li>
+            							<a class="active" href="../projects.html">Projects</a>
+            						</li>
+            						<li>
+            							<a href="https://www.linkedin.com/in/thomas-rind-92203bb8" target="_blank">LinkedIn</a>
+            						</li>
+            						<li>
+            							<a href="assets/files/TRRes.pdf" target="_blank">Resume</a>
+									</li>
+									<li>
+            							<a href="https://github.com/trind01" target="_blank">Github</a>
+            						</li>
+								</ul>
+							</nav>
+						</div>
+            		</div>
+            	</div>
+			</header>
+			<div class="masthead-wrap-project">
+				<div id="title">
+					<div class="container">
+						<div class="transistion bread left-bread-project"></div>
+						<div class="transistion bread right-bread"></div>
+						<div class="row">
+							<div class="col-md-12">
+								<div id="head-slider" class="transistion">
+									<div class="slide-contents">
+										<div class="slide">
+											<p class="header-desc">Reprogram a LED Fan</p>
+										</div>
+									</div>
+								</div>
+							</div> 
+						</div> 
+					</div>
+				</div>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <figure>
+                            <img src="../assets/img/projects/fan/open_fan.jpg">
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h3> Origin</h3>
+                        <p>
+                            I found a LED fan an noticed it had a micro-USB port. 
+                            I tried just plugging it into my computer's USB port but windows couldn't recognize it.
+                            I then popped off the top of fan and saw that the USB was connected to a EEPROM.
+                            I assumed that the fan was storing the animations in the EEProm and looked up the IC.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Design</h3>
+                        <p>
+                            I couldn't connect to the EEPROM with my windows laptop easily so I pulled out a RaspberryPi.
+                            With this I could use I2C with the EEPROM to read and write to it. I must have written to it
+                            accidently before because when I read from it, it did not make sense and I tried turning on
+                            the fan to see that the animations were messed up. I started trying to make sense of some things.
+                            I wrote some bytes to the first 15 bytes until I was able to get a character space to have all the 
+                            LEDs on. I was also able to make animations a certain number of characters but was still stuck at 
+                            the number of animations being 1. I read from another 
+                            <a href="http://zjembedded.blogspot.com/2011/08/hacking-led-pov-fan.html">blog</a> that the 
+                            the format was first byte = number of screens, next_byte = number of characters, then 5 bytes =
+                            character and so on. I tried this format but it did not work. Looking more into it I managed to 
+                            discover that the format for an animation was different. It was number of characters, animation 
+                            control, then the 5 bytes per character. I played around with the animation control and figured 
+                            out which bit did what. Furthermore I found out that I was limited to 20 characters per animation,
+                            but I could have alot of animations. I set up a scripts that would take a list of strings less than
+                            20 characters and write them to the flash and got the fan show whatever I wanted.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <figure>
+                            <img src="../assets/img/projects/fan/corrupted.jpg">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <figure>
+                            <img src="../assets/img/projects/fan/biggest_fan.jpg">
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Conclusion</h3>
+                        <p>
+                            This was a fun and easy with the bulk of the project trying to decipher the format after I accidently blew it
+                            away. Obviously I would avoid doing that next time. I am not sure when I overwrote the orginal data but it
+                            seems to be that I overwrote the first 2 bytes which changed the number of animations and the length of
+                            the first animation. Playing with these 2 bytes to fix it ended up showing me alot about the animations
+                            and the length of a character so it wasn't all for loss. 
+                        </p>
+                        <br>
+                        <h5>Please Enjoy the Video Below</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <iframe 
+                        width="560" height="315" 
+                        src="https://www.youtube.com/embed/1YWhWWR6LU4" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p>Want to get home? Click <a href="../index.html">Tom.</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    </body>
+</html>
