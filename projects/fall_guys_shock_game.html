@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="js no-touch rgba backgroundsize borderradius boxshadow 
+            opacity cssanimations csstransitions generatedcontent 
+            inlinesvg wf-brandongrotesque-n4-active wf-brandongrotesque-n7-active 
+            wf-brandongrotesque-n5-active wf-brandongrotesque-n3-active 
+            wf-adobegaramondpro-i7-active wf-adobegaramondpro-n7-active 
+            wf-adobegaramondpro-i4-active wf-adobegaramondpro-n4-active 
+            wf-brandongrotesque-i5-active wf-active" lang="en" style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="A shocking way to play the Fall Guys.">
+        <link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../assets/css/index.css">
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script src="../assets/js/respond.min.js"></script>
+		<script src="../assets/js/modernizr.js"></script>
+		<link rel="stylesheet" href="https://use.typekit.net/ehh5azc.css">
+		<link rel="stylesheet" href="https://use.typekit.net/ehh5azc.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <title>Shocking Fall Guys</title>
+    </head>
+    <body>
+        <section id="top">
+            <header id="home-top" class="nav">
+            	<div class="container">
+            		<div class="row">
+            			<div class="col-md-4 col-xs-4">
+            				<h1 id="header-logo" class="image-text">
+            					<a href="../index.html">
+									<span class="mask"></span>
+									<span class="behind"><i class=""></i></span>
+									Thomas Rind
+									
+								</a>
+            				</h1>
+            			</div>
+            			<div class="col-md-8 col-xs-8">
+            				<nav>
+            					<ul class="nav-list transistion">
+            						<li>
+            							<a href="../index.html">About</a>
+            						</li>
+            						<li>
+            							<a class="active" href="../projects.html">Projects</a>
+            						</li>
+            						<li>
+            							<a href="https://www.linkedin.com/in/thomas-rind-92203bb8" target="_blank">LinkedIn</a>
+            						</li>
+            						<li>
+            							<a href="assets/files/TRRes.pdf" target="_blank">Resume</a>
+									</li>
+									<li>
+            							<a href="https://github.com/trind01" target="_blank">Github</a>
+            						</li>
+								</ul>
+							</nav>
+						</div>
+            		</div>
+            	</div>
+			</header>
+			<div class="masthead-wrap-project">
+				<div id="title">
+					<div class="container">
+						<div class="transistion bread left-bread-project"></div>
+						<div class="transistion bread right-bread"></div>
+						<div class="row">
+							<div class="col-md-12">
+								<div id="head-slider" class="transistion">
+									<div class="slide-contents">
+										<div class="slide">
+											<p class="header-desc">Making Fall Guys<br>More Frustrating!</p>
+										</div>
+									</div>
+								</div>
+							</div> 
+						</div> 
+					</div>
+				</div>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <figure>
+                            <img src="../assets/img/projects/dino_chrome/Disassembled.jpg">
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h3> Origin</h3>
+                        <p>
+                            After making the Dino Chrome Game controller I wanted to try a 3D platformer. I had been playing 
+                            A lot of Fall Guys and thought whatever the outcome of this would be it would look hilarious in this game.
+                            The reason I added the shocks was because I orginally wanted to just do some form of haptic feedback and 
+                            this was be the easiest way to implement it since I had already built the rig. The main way of controlling
+                            the movement is through an accelerometer and gyrometer. The ESP32 will send out the movement through
+                            bluetooth, and when it receives feedback it can turn on a relay that will turn on a TENs unit to shock
+                            the player. Just to be clear the TENs unit is set to low and doesn't actually hurt, it's just very
+                            surprising when it happens.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Design</h3>
+                        <p>
+                            I orginally was going to this completely on Bluetooth with it going between my laptop and the ESP32.
+                            Unfortunately I found out that BLE HID descriptors are not as advanced as USB HID descriptors. 
+                            BLE does not have motor feedback in the gamepad descriptors and devices that do, like the XBox controller
+                            and the Nintendo Switch controller, are proprietary. I dabbled around to see if I could make a driver but
+                            decided it was easier to just use a work around. So I set up a Arduino Leonardo up as an Xinput controller 
+                            with USB HIDs and connected it to a serial Bluetooth device. My ESP32 in my belt controller was set up as a
+                            serial Bluetooth device too. My laptop connected to both serial ports through a python script and would 
+                            forward data between them. Whenever the Leonardo got a motor value within a certain range it would forward 
+                            that to the ESP32 which would flick on the TENs unit, while the ESP32 would send the controls based on
+                            the readings of an accelerometer and gyrometer. 
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <figure>
+                            <img src="../assets/img/projects/fall_guys/controls.jpg">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <figure>
+                            <img src="../assets/img/projects/fall_guys/full_device.jpg">
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Conclusion</h3>
+                        <p>
+                            The movement in 3D platformers are very hard to get down. I had to move the game camera with my movements,
+                            or else the movements would desync from the controller. I also had to be very careful with my movements or 
+                            else they would trigger something I wouldn't expect like a jump. Also Fall Guys has a lot of haptic feedback,
+                            so I was very surprised at the amounts of shocks I got. I did manage to qualify in a few rounds, which I was
+                            my goal. There was no way I could actually win an entire game since that's already hard without this 
+                            controller. I was also disappointed that BLE gamepad descriptors don't have haptic feedback. I spent alot of hours researching this but just wanted to start the project so I gave up on that method and decided to just set
+                            up a XInput USB controller. If I had alot more time I probably would have tried to find a way to make that
+                            work.
+                        </p>
+                        <br>
+                        <h5>Please Enjoy the Video Below</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="project-info">
+            <div class="container">
+                <div class="row">
+                    <iframe 
+                        width="560" height="315" 
+                        src="https://youtu.be/nAq_nXkpFBc" 
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p>Want to get home? Click <a href="../index.html">Tom.</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    </body>
+</html>
