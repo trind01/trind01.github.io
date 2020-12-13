@@ -96,11 +96,11 @@
                         <h3> Origin</h3>
                         <p>
                             After making the Dino Chrome Game controller I wanted to try a 3D platformer. I had been playing 
-                            A lot of Fall Guys and thought whatever the outcome of this would be it would look hilarious in this game.
-                            The reason I added the shocks was because I orginally wanted to just do some form of haptic feedback and 
+                            a lot of Fall Guys and thought no matter the outcome of this, it would look hilarious in this game.
+                            The reason I added the shocks was because I originally wanted to do some form of haptic feedback and 
                             this was be the easiest way to implement it since I had already built the rig. The main way of controlling
                             the movement is through an accelerometer and gyrometer. The ESP32 will send out the movement through
-                            bluetooth, and when it receives feedback it can turn on a relay that will turn on a TENs unit to shock
+                            Bluetooth, and when it receives feedback it can turn on a relay that will turn on a TENs unit to shock
                             the player. Just to be clear the TENs unit is set to low and doesn't actually hurt, it's just very
                             surprising when it happens.
                         </p>
@@ -115,11 +115,11 @@
                     <div class="col-md-6">
                         <h3>Design</h3>
                         <p>
-                            I orginally was going to this completely on Bluetooth with it going between my laptop and the ESP32.
+                            I originally was going to this completely on Bluetooth with a connection going between my laptop and the ESP32.
                             Unfortunately I found out that BLE HID descriptors are not as advanced as USB HID descriptors. 
                             BLE does not have motor feedback in the gamepad descriptors and devices that do, like the XBox controller
                             and the Nintendo Switch controller, are proprietary. I dabbled around to see if I could make a driver but
-                            decided it was easier to just use a work around. So I set up a Arduino Leonardo up as an Xinput controller 
+                            decided it was easier to just use a workaround. I set up a Arduino Leonardo up as an Xinput controller 
                             with USB HIDs and connected it to a serial Bluetooth device. My ESP32 in my belt controller was set up as a
                             serial Bluetooth device too. My laptop connected to both serial ports through a python script and would 
                             forward data between them. Whenever the Leonardo got a motor value within a certain range it would forward 
@@ -147,13 +147,14 @@
                     <div class="col-md-6">
                         <h3>Conclusion</h3>
                         <p>
-                            The movement in 3D platformers are very hard to get down. I had to move the game camera with my movements,
-                            or else the movements would desync from the controller. I also had to be very careful with my movements or 
-                            else they would trigger something I wouldn't expect like a jump. Also Fall Guys has a lot of haptic feedback,
-                            so I was very surprised at the amounts of shocks I got. I did manage to qualify in a few rounds, which I was
-                            my goal. There was no way I could actually win an entire game since that's already hard without this 
-                            controller. I was also disappointed that BLE gamepad descriptors don't have haptic feedback. I spent alot of hours researching this but just wanted to start the project so I gave up on that method and decided to just set
-                            up a XInput USB controller. If I had alot more time I probably would have tried to find a way to make that
+                            The movement in 3D platformers is very hard to get down based just on an accelerometer. I had to move the 
+                            game camera with my movements, or else the movements would desync from the controller. I also had to be very 
+                            careful with my movements or else they would trigger something I wouldn't expect like a jump. Also Fall Guys 
+                            has a lot of haptic feedback, so I was very surprised at the amounts of shocks I got. I did manage to qualify 
+                            in a few rounds, which I was my goal. There was no way I could actually win an entire game since that's already 
+                            hard without this controller. I was also disappointed that BLE gamepad descriptors don't have haptic feedback. 
+                            I spent alot of hours researching this but just wanted to start the project so I gave up on that method and decided 
+                            to just set up a XInput USB controller. If I had alot more time I probably would have tried to find a way to make that
                             work.
                         </p>
                         <br>
